@@ -4,17 +4,18 @@
 //run with node ts_tutorial.js
 
 // types
-let userName: string = 'Romain'
-let age: number = 41
-let isAdmin: boolean = true
-let ids: number[] = [1, 2, 3]
-let x: any = 'Cake'
-let xArr: any[] = ['Cake', 42, false]
-let date: Date = new Date()
+// let userName: string = 'Romain'
+// let age: number = 41
+// let isAdmin: boolean = true
+// let ids: number[] = [1, 2, 3]
+// let x: any = 'Cake'
+// let xArr: any[] = ['Cake', 42, false]
+// let date: Date = new Date()
 
 const concatenateValues = (a: string, b: string): string /*return type*/ => {
   return a + b
 }
+concatenateValues('Hello ', 'World')
 
 // interface (object type), union ( | ), null, void, read-only and not required (?)
 interface UserInterface {
@@ -32,6 +33,7 @@ const user: UserInterface = {
     console.log(message)
   },
 }
+user.greet('coucou')
 
 // type "schema"
 type IdFieldType = string | number
@@ -39,6 +41,7 @@ type IdFieldType = string | number
 const printId = (id: IdFieldType) => {
   console.log(id)
 }
+printId(666)
 
 // intersection (&)
 interface businessPartner {
